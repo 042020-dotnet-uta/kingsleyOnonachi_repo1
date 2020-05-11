@@ -1,0 +1,29 @@
+Q1. What does Http response code 408 means?
+-Not Found
+-Bad request
+-(correct)Request Timeout
+-Not Accepted
+
+Q2. Which of the following class in System.ComponentModel.DataAnnotations namespace provides Url validation?
+-(correct)UrlAttribute
+-ValidationAttribute
+-Validator
+-FilterUIHintAttrible
+
+Q3.Which service types can be injected into Startup constructor when using generic host?
+-IWebHostEnvironment
+-IHostEnvironment
+-IConfiguration
+-(correct)All of the above
+
+Q4.Which of the following is not Common Design Principle?
+-(correct)Iheritance
+-Separation of Concerns
+-Encapsulation
+-Dependency inversion
+
+Q5. The At-rule in CSS defines the character set used by the style sheet?
+-@import
+-(correct)@charset
+-@namespace
+-@document
