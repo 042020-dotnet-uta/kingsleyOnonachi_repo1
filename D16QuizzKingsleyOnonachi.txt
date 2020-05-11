@@ -1,0 +1,29 @@
+Q1. Which of the following sdlc is more expensive?
+-V-Model
+-Waterfall Model
+-Big Bang Model
+-Spiral Model
+
+Q2.What kind of SDLC could you recommend when the clieny does not know exactly what he want?
+-(correct)Big Bang model
+-Waterfall model
+-Spiral Model
+-Agile
+
+Q3.As the face of the team to the stakeholders in Scrum, which of the following is not the communication tasks of the product owner to the stakeholders?
+-Define and announce releases
+-Share progress during governance meetings
+-Negotiate priorities, scope, funding, and schedule
+-(correct)None of the above
+
+Q4.CMMI consists of three overlapping disciplines(constellations),which is not these disciplines?
+-(correct)CMMI for Program (CMMI-PRO)
+-CMMI for Development (CMMI-DEV)
+-CMMI for Services (CMMI-SVC)
+-CMMI for Acquisition (CMMI-ACQ)
+
+Q5.Which stage does the prototype developed in software Prototype Model is presented to customer and other impartant stakeholders?
+-Basic requirement identification
+-(correct)review of the Prototype
+-revise and Enhnce the Prototype
+-developing the prototype
