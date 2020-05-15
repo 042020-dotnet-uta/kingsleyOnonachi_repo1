@@ -7,6 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Project1
 {
@@ -14,9 +15,28 @@ namespace Project1
     {
         public static void Main(string[] args)
         {
-            CreateHostBuilder(args).Build().Run();
-        }
 
+            //CreateHostBuilder(args).Build().Run();
+            //Create a genric host and builds the app
+            var host = CreateHostBuilder(args).Build();
+
+            //Creates scope
+            using (var scope = host.Services.CreateScope())
+            {
+                var services = scope.ServiceProvider;
+                try
+                {
+                    MvcProject1.Data.SeedData.Initialize(services);//seed the Db with the Static method
+                }
+                catch (Exception ex)
+                {
+                    //log if an exception occurs
+                    var logger = services.GetRequiredService<ILogger<Program>>();
+                    logger.LogError(ex, "An exception happened in the seeding of DB.");
+                }
+            }
+            host.Run();
+        }
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>

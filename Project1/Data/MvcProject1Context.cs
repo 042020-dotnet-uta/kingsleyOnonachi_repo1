@@ -15,12 +15,13 @@ namespace MvcProject1.Data
 
         }
 
-        public virtual DbSet<Customers> Customers { get; set; }
+        public virtual DbSet<Customer> Customer { get; set; }
         public virtual DbSet<Defaultstore> Defaultstore { get; set; }
         public virtual DbSet<Inventory> Inventory { get; set; }
         public virtual DbSet<Orderlist> Orderlist { get; set; }
         public virtual DbSet<Store> Store { get; set; }
         public virtual DbSet<Orders> Order { get; set; }
+        public DbSet<MvcProject1.Models.CustomerViewModel> CustomerViewModel { get; set; }
         
     }
 }
