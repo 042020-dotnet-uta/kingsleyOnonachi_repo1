@@ -7,7 +7,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 
-namespace MvcProject1.Models
+namespace MvcProject1.Data
 {
     public class Customer
     {
@@ -24,13 +24,22 @@ namespace MvcProject1.Models
         public string LastName { get; set; }
         [Required]
         public string StreetAddress { get; set; }
+        [Required]
         public string CityAddress { get; set; }
+        [Required]
         public string StateAddress { get; set; }
+        [Required]
         public string CountryAddress { get; set; }
+        [Required]
         public string UserName { get; set; }
+        [Required(ErrorMessage = "Please Enter Email Address")]
+        [Display(Name = "Email Address")]
+        [RegularExpression(".+@.+\\..+", ErrorMessage = "Please Enter Correct Email Address")]
         public string Email { get; set; }
 
-
+        [Required]
+        [DataType(DataType.Password)]
+        [Display(Name = "Password")]
         public string PassWord { get; set; }
 
         [Display(Name ="Date of Regisration")]

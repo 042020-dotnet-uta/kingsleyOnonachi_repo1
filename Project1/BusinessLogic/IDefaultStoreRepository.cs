@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MvcProject1.BusinessLogic
 {
-    interface IDefaultStoreRepository
+    public interface IDefaultStoreRepository
     {
         public List<Customer> GetAllCustomerOfStore(int storeId);
         public int TotalOfStoreCustomers(int storeId = 1);

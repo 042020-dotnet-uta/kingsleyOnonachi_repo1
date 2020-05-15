@@ -1,0 +1,33 @@
+﻿Q1. Which of the following are sometimes called the cloud computing “stack”?
+* Infrastructure as a service
+* Serverless
+* (correct) both of the above
+* None of the above
+
+
+Q2. When you rent a server, virtual Machines, storage and operating system from a cloud provider on a pay-as-you-go basis, Which type of services is it?
+* Platform as a service
+* (correct) Infrastructure as a service
+* Serverless
+* Software as a service
+
+
+Q3. Which is not cloud computing terms
+* (correct) Software development life cycle
+* Business analytics tools
+* Cloud bursting
+* DevOps
+
+
+Q4. These are what’s possible today with cloud services from a cloud provider except?
+* Create cloud-native applications
+* Test and build applications
+* Stream audio and video
+* (correct)Hardware prototyping
+
+
+Q5. What is a service-level agreement (SLA) in terms of cloud computing?
+* (correct) is a commitment between a service provider and a client
+* is a commitment between a server and a client
+* is a commitment between a government and a company
+* is a commitment between a internet provider and a business

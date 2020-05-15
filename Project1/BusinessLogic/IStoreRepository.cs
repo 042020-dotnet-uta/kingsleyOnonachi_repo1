@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MvcProject1.BusinessLogic
 {
-    interface IStoreRepository : IDisposable
+    public interface IStoreRepository : IDisposable
     {
         Task <IEnumerable<Store>> GetAllStore();
         Store GetStoreById(int storeId);

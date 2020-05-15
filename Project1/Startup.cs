@@ -10,6 +10,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using MvcProject1.Data;
+using MvcProject1.DataLogic;
+using MvcProject1.BusinessLogic;
 
 namespace Project1
 {
@@ -28,6 +30,7 @@ namespace Project1
             services.AddControllersWithViews();
             services.AddDbContext<MvcProject1Context>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("MvcProject1Context"))); ;
+            services.AddScoped<ICustomerRepository, CustomerRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

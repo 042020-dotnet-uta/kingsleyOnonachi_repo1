@@ -51,9 +51,9 @@ namespace MvcProject1.DataLogic
             return result;
         }
 
-        public double GetUnitPrice(int productId)
+        public decimal GetUnitPrice(int productId)
         {
-            double result = 0.0;
+            decimal result = 0.0M;
             if (productId <= 0)
             {
                 var product = _context.Inventory.Find(productId);

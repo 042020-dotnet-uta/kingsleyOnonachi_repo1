@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using MvcProject1.Models;
+using MvcProject1.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,39 +18,19 @@ namespace MvcProject1.Data
             {
                 return;
             }
-
-            if (context.Customer.Any() && !(context.Defaultstore.Any() && context.Inventory.Any() && context.Order.Any() && context.Orderlist.Any() && context.Store.Any()))
-            {
-                CustomerHelper(context);
-            }
-            else if (context.Store.Any() && !(context.Defaultstore.Any() && context.Inventory.Any() && context.Order.Any() && context.Orderlist.Any() && !context.Customer.Any()))
-            {
-                StoreHelper(context);
-            }
-            else if (context.Defaultstore.Any() && !(!context.Store.Any() && context.Inventory.Any() && context.Order.Any() && context.Orderlist.Any() && !context.Customer.Any()))
-            {
-                DefaultStoreHelper(context);
-            }
-            else if (context.Inventory.Any() && !(!context.Store.Any() && !context.Defaultstore.Any() && context.Order.Any() && context.Orderlist.Any() && !context.Customer.Any()))
-            {
-                InventoryHelper(context);
-            }
-            else if (context.Order.Any() && !(!context.Store.Any() && !context.Defaultstore.Any() && !context.Inventory.Any() && context.Orderlist.Any() && !context.Customer.Any()))
-            {
-                OrderHelper(context);
-            }
-            else if (context.Orderlist.Any() && !(!context.Store.Any() && !context.Defaultstore.Any() && !context.Inventory.Any() && !context.Order.Any() && !context.Customer.Any()))
-            {
-                OrderListHelper(context);
-            }
             else
             {
                 CustomerHelper(context);
+                context.SaveChanges();
                 StoreHelper(context);
+                context.SaveChanges();
                 DefaultStoreHelper(context);
+                context.SaveChanges();
                 InventoryHelper(context);
+                context.SaveChanges();
                 OrderHelper(context);
                 OrderListHelper(context);
+                context.SaveChanges();
 
             }
         }
@@ -76,7 +56,7 @@ namespace MvcProject1.Data
                 }
 
              );
-            context.SaveChanges();
+            
         }
 
         private static void OrderHelper(MvcProject1Context context)
@@ -120,7 +100,7 @@ namespace MvcProject1.Data
 
 
                 );
-            context.SaveChanges();
+            
         }
 
         private static void InventoryHelper(MvcProject1Context context)
@@ -133,7 +113,7 @@ namespace MvcProject1.Data
                     Name = "Samsung TV",
                     Description = "HD 4K 44\" TV",
                     Quantity = 10,
-                    ListPrice = 400.98
+                    ListPrice = 400.98M
 
                 },
                 new Inventory
@@ -143,7 +123,7 @@ namespace MvcProject1.Data
                     Name = "Samsung TV",
                     Description = "HD 4K 44\" TV",
                     Quantity = 10,
-                    ListPrice = 400.98
+                    ListPrice = 400.98M
 
                 },
                 new Inventory
@@ -153,7 +133,7 @@ namespace MvcProject1.Data
                     Name = "Apple TV",
                     Description = "HD 4K 44\" TV",
                     Quantity = 10,
-                    ListPrice = 500.00
+                    ListPrice = 500.00M
 
                 },
                 new Inventory
@@ -163,7 +143,7 @@ namespace MvcProject1.Data
                     Name = "Apple TV",
                     Description = "HD 4K 44\" TV",
                     Quantity = 10,
-                    ListPrice = 500.98
+                    ListPrice = 500.98M
 
                 },
                 new Inventory
@@ -173,7 +153,7 @@ namespace MvcProject1.Data
                     Name = "Apple TV",
                     Description = "HD 4K 44\" TV",
                     Quantity = 10,
-                    ListPrice = 500.98
+                    ListPrice = 500.98M
 
                 },
                 new Inventory
@@ -183,7 +163,7 @@ namespace MvcProject1.Data
                     Name = "IPhone X ",
                     Description = "Smart Phone",
                     Quantity = 10,
-                    ListPrice = 1200.98
+                    ListPrice = 1200.98M
 
                 },
                 new Inventory
@@ -193,7 +173,7 @@ namespace MvcProject1.Data
                     Name = "IPhone X ",
                     Description = "Smart Phone",
                     Quantity = 10,
-                    ListPrice = 1200.98
+                    ListPrice = 1200.98M
 
                 },
                 new Inventory
@@ -203,7 +183,7 @@ namespace MvcProject1.Data
                     Name = "IPhone XMax ",
                     Description = "Smart Phone",
                     Quantity = 20,
-                    ListPrice = 1000.98
+                    ListPrice = 1000.98M
 
                 },
                 new Inventory
@@ -213,12 +193,12 @@ namespace MvcProject1.Data
                     Name = "IPhone XMax ",
                     Description = "Smart Phone",
                     Quantity = 20,
-                    ListPrice = 1000.98
+                    ListPrice = 1000.98M
 
                 }
 
             );
-            context.SaveChanges();
+           
         }
 
         private static void DefaultStoreHelper(MvcProject1Context context)
@@ -262,7 +242,7 @@ namespace MvcProject1.Data
                  }
 
              );
-            context.SaveChanges();
+            
         }
 
         private static void StoreHelper(MvcProject1Context context)
@@ -310,7 +290,7 @@ namespace MvcProject1.Data
                     CountryAddress = "USA"
                 }
                 );
-            context.SaveChanges();
+            
 
         }
 
@@ -388,7 +368,7 @@ namespace MvcProject1.Data
                      RegDate = DateTime.Parse("2019-2-10")
                  }
                 );
-            context.SaveChanges();
+            
         }
     }
 }

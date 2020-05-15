@@ -7,18 +7,20 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace MvcProject1.Models
+namespace MvcProject1.Data
 {
     public class Inventory
     {
         public int InventoryID { get; set; }
 
         public int StoreID { get; set; }
+        [Required]
         public int Quantity { get; set; }
-
+        [Required]
         public string Name { get; set; }
         public string Description { get; set; }
-        public double ListPrice { get; set; }
+        [Column(TypeName = "decimal(18,2)")]
+        public decimal ListPrice { get; set; }
 
         public virtual Store Store { get; set; }
 

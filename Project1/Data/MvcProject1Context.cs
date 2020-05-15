@@ -1,9 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using MvcProject1.Models;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
+using System.Threading.Tasks; 
+using MvcProject1.Models;
 
 namespace MvcProject1.Data
 {
@@ -22,6 +23,11 @@ namespace MvcProject1.Data
         public virtual DbSet<Store> Store { get; set; }
         public virtual DbSet<Orders> Order { get; set; }
         public DbSet<MvcProject1.Models.CustomerViewModel> CustomerViewModel { get; set; }
+        public DbSet<MvcProject1.Models.CustomerLogin> CustomerLogin { get; set; }
+        public DbSet<MvcProject1.Models.OrderListViewModel> OrderListViewModel { get; set; }
+        public DbSet<MvcProject1.Models.AdmCustomerViewModel> AdmCustomerViewModel { get; set; }
+        public DbSet<MvcProject1.Models.InventoryViewModel> InventoryViewModel { get; set; }
+       
         
     }
 }
