@@ -22,7 +22,7 @@ namespace MvcProject1.Controllers
         // GET: OrderList
         public async Task<IActionResult> Index()
         {
-            return View(await _context.OrderListViewModel.ToListAsync());
+            return View(await _context.Order.ToListAsync());
         }
 
         // GET: OrderList/Details/5
@@ -33,7 +33,7 @@ namespace MvcProject1.Controllers
                 return NotFound();
             }
 
-            var orderListViewModel = await _context.OrderListViewModel
+            var orderListViewModel = await _context.Order
                 .FirstOrDefaultAsync(m => m.ID == id);
             if (orderListViewModel == null)
             {
@@ -73,7 +73,7 @@ namespace MvcProject1.Controllers
                 return NotFound();
             }
 
-            var orderListViewModel = await _context.OrderListViewModel.FindAsync(id);
+            var orderListViewModel = await _context.Order.FindAsync(id);
             if (orderListViewModel == null)
             {
                 return NotFound();
@@ -124,7 +124,7 @@ namespace MvcProject1.Controllers
                 return NotFound();
             }
 
-            var orderListViewModel = await _context.OrderListViewModel
+            var orderListViewModel = await _context.Order
                 .FirstOrDefaultAsync(m => m.ID == id);
             if (orderListViewModel == null)
             {
@@ -139,15 +139,15 @@ namespace MvcProject1.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var orderListViewModel = await _context.OrderListViewModel.FindAsync(id);
-            _context.OrderListViewModel.Remove(orderListViewModel);
+            var orderListViewModel = await _context.Order.FindAsync(id);
+            _context.Order.Remove(orderListViewModel);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool OrderListViewModelExists(int id)
         {
-            return _context.OrderListViewModel.Any(e => e.ID == id);
+            return _context.Order.Any(e => e.ID == id);
         }
     }
 }

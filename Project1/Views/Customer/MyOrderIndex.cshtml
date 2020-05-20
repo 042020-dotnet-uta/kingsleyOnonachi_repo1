@@ -1,0 +1,74 @@
+﻿@model MvcProject1.Models.OrderViewModel
+@{
+    ViewData["Title"] = "MyOrderIndex";
+}
+
+<h1>MyOrderIndex</h1>
+
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Buy</a>
+</p>
+
+<form asp-controller="Customer" asp-action="MyOrderIndex" method="get">
+    <p>
+        <select asp-for="C" asp-items="Model.Locations">
+            <option value="">ALL</option>
+        </select>
+        <select asp-for="GameGenre" asp-items="Model.Genre">
+            <option value="">ALL</option>
+        </select>
+        Title:<input type="text" asp-for="SearchString" />
+        <input type="submit" value="Filter" />
+    </p>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OrderDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customer.Defaultstore)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Total)
+            </th>
+            
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OrderID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.InventoryID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Quantity)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@item.OrderID">Details</a> |
+                    
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

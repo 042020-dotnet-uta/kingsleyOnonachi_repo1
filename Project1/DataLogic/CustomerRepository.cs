@@ -88,7 +88,12 @@ namespace MvcProject1.DataLogic
 
             return customer;
         }
+        public Customer UserLogin(string UserName, string password)
+        {
+            var userlogin = _context.Customer.SingleOrDefault(c => c.UserName == UserName && c.PassWord == password);
 
+            return userlogin;
+        }
         public async Task<Customer> GetCustomerByID(int Id)
         {
 
@@ -101,7 +106,7 @@ namespace MvcProject1.DataLogic
             {
                 return NotFoundException();
             }
-            var customer = await _context.Customer.FirstOrDefaultAsync(c => c.CustomerID == Id);
+            var customer =  _context.Customer.FirstOrDefault(c => c.CustomerID == Id);
             if (customer == null)
             {
                 return NotFoundException();
@@ -111,15 +116,54 @@ namespace MvcProject1.DataLogic
             return customer;
         }
 
-        public async Task<IEnumerable<Customer>> GetAllCustomers()
+        public async Task<CustomerViewModel> GetCustomerViewByID(int Id)
         {
-            var customers = await _context.Customer.ToListAsync();
+
+            //using project0Context context = new project0Context();
+            ///Here customer information is returned if supplied iit's customer id
+            ///Input: customerId
+            ///Output: custommer
+
+            if (Id <= 0)
+            {
+                return null;
+            }
+            var customer =_context.Customer.FirstOrDefault(c => c.CustomerID == Id);
+            if (customer == null)
+            {
+                throw null;
+            }
+            var customerView = new CustomerViewModel
+            {
+                CustomerID = customer.CustomerID,
+                FirstName = customer.FirstName,
+                LastName = customer.LastName,
+                StreetAddress = customer.StreetAddress,
+                CityAddress = customer.CityAddress,
+                StateAddress = customer.StateAddress,
+                CountryAddress = customer.CountryAddress,
+                UserName = customer.UserName,
+                Email = customer.Email,
+                PassWord = customer.PassWord,
+                RegDate = customer.RegDate
+            };
+
+            return customerView;
+        }
+        public IEnumerable<Customer> GetAllCustomers()
+        {
+            var customers = _context.Customer.ToList();
             if (customers == null)
             {
-               
+                throw NotFound();
             }
 
             return customers;
+        }
+
+        private Exception NotFound()
+        {
+            throw new NotImplementedException();
         }
 
         public int AddCustomer(Customer customer)
@@ -147,7 +191,17 @@ namespace MvcProject1.DataLogic
             return result;
         }
 
+        public int GetCustomerIdByEmail(string email)
+        {
+            if(email == null)
+            {
+                return -1;
+            }
 
+            var customer =  _context.Customer.FirstOrDefault(c => c.Email == email);
+
+            return customer.CustomerID;
+        }
 
         #region IDisposable Support
         private bool disposedValue = false; // To detect redundant calls

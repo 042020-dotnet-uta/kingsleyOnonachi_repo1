@@ -16,8 +16,6 @@ namespace Project1
         public static void Main(string[] args)
         {
 
-            //CreateHostBuilder(args).Build().Run();
-            //Create a genric host and builds the app
             var host = CreateHostBuilder(args).Build();
 
             //Creates scope

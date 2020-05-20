@@ -53,9 +53,5 @@ namespace MvcProject1.Models
         [DataType(DataType.Date)]
         public DateTime RegDate { get; set; }
 
-
-
-        public virtual ICollection<Defaultstore> Defaultstore { get; set; }
-        public virtual ICollection<Orders> Orders { get; set; }
     }
 }

@@ -4,7 +4,9 @@ using MvcProject1.Data;
 using MvcProject1.Models;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Threading.Tasks;
 
 namespace MvcProject1.DataLogic
@@ -28,7 +30,12 @@ namespace MvcProject1.DataLogic
             }
             return result;
         }
+        public  IEnumerable<Inventory> GetAllProducts()
+        {
+            var products = _context.Inventory.ToList();
 
+            return products; 
+        }
         public IEnumerable<Inventory> GetAllProductsStore(int storeId)
         {
             return _context.Inventory.Where(i => i.StoreID == storeId).ToList();
@@ -74,7 +81,17 @@ namespace MvcProject1.DataLogic
             }
             return result;
         }
+        public void DeleteProduct(Inventory product)
+        {   
+            if(product != null)
+            {
+                _context.Inventory.Remove(product);
+                _context.SaveChanges();
+            }
+            else
+                _context.SaveChanges();
 
+        }
         #region IDisposable Support
         private bool disposedValue = false; // To detect redundant calls
 
@@ -109,6 +126,21 @@ namespace MvcProject1.DataLogic
             Dispose(true);
             // TODO: uncomment the following line if the finalizer is overridden above.
             // GC.SuppressFinalize(this);
+        }
+
+        public Inventory GetProductByName(string name)
+        {
+            return _context.Inventory.Where(p => p.Name == name).FirstOrDefault();
+        }
+
+        public Inventory GetProductByDescription(string description)
+        {
+            if(description == null)
+            {
+                throw new NotImplementedException();
+                
+            }
+            return _context.Inventory.Where(p => p.Description == description).FirstOrDefault();
         }
         #endregion
     }

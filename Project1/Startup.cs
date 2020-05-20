@@ -12,6 +12,7 @@ using Microsoft.Extensions.Hosting;
 using MvcProject1.Data;
 using MvcProject1.DataLogic;
 using MvcProject1.BusinessLogic;
+using Microsoft.AspNetCore.Identity;
 
 namespace Project1
 {
@@ -27,10 +28,27 @@ namespace Project1
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+           
             services.AddControllersWithViews();
             services.AddDbContext<MvcProject1Context>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("MvcProject1Context"))); ;
+                options.UseSqlServer(Configuration.GetConnectionString("MvcProject1Context")));
+
+            
+            services.AddAuthentication("CookiesAuth")
+                .AddCookie("CookieAuth", config =>
+                {
+                    config.Cookie.Name = "Customer.Cookie";
+                    config.LoginPath = "/Customer/Login";
+                    config.ExpireTimeSpan = TimeSpan.FromMinutes(1);
+                });
+            
             services.AddScoped<ICustomerRepository, CustomerRepository>();
+
+            services.AddScoped<IStoreRepository, StoreRepository>();
+            services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddScoped<IDefaultStoreRepository, DefaultStoreRepository>();
+            services.AddScoped<IOrderRepository, OrderRepository>();
+            services.AddScoped<IOrderListRepository, OrderListRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -53,6 +71,7 @@ namespace Project1
 
             app.UseAuthorization();
 
+          app.UseAuthentication();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(

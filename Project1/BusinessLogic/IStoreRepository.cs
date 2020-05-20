@@ -9,7 +9,7 @@ namespace MvcProject1.BusinessLogic
 {
     public interface IStoreRepository : IDisposable
     {
-        Task <IEnumerable<Store>> GetAllStore();
+        IEnumerable<Store> GetAllStore();
         Store GetStoreById(int storeId);
         int AddStore(Store store);
         int UpdateStore(Store store);

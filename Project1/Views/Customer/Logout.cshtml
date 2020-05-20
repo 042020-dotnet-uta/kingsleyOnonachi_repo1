@@ -1,0 +1,35 @@
+﻿@*@using System.Security.Claims
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width = device-width" />
+    <title>@ViewData["Title"] = "Login"</title>
+</head>
+
+<body>
+    <div>
+        @if (User.)
+        {
+            <div>@User.Identity.Name</div>
+            <form method="post" asp-controller="Customer" aspcontroller="Logout">
+                <input type="submit" value="Logout" />
+            </form>
+        }
+        else
+        {
+            <a asp-controller="CustomerLogin" asp-action="Login">Login</a>
+            <a asp-controller="Registration" asp-action="Register">Register</a>
+        }
+    </div>
+
+    <div>
+        @DateTime.Now
+    </div>
+
+    <div>
+        @RenderBody()
+    </div>
+
+</body>
+</html>*@

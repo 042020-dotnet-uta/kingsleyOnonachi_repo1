@@ -1,0 +1,2 @@
+C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\FruitServiceLib\FruitServiceClient\obj\Debug\FruitServiceClient.csprojAssemblyReference.cache
+C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\FruitServiceLib\FruitServiceClient\obj\Debug\FruitServiceClient.csproj.CoreCompileInputs.cache

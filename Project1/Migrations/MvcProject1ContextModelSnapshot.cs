@@ -15,7 +15,7 @@ namespace MvcProject1.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "3.1.3")
+                .HasAnnotation("ProductVersion", "3.1.4")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
@@ -103,6 +103,9 @@ namespace MvcProject1.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("ID")
+                        .HasColumnType("int");
+
                     b.Property<decimal>("ListPrice")
                         .HasColumnType("decimal(18,2)");
 
@@ -157,6 +160,9 @@ namespace MvcProject1.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<int>("CustomerId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("ID")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("OrderDate")

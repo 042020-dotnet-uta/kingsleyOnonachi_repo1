@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
-using System.Web.Mvc;
+using System.Web;
 
 namespace MvcProject1.Models
 {
@@ -14,7 +14,7 @@ namespace MvcProject1.Models
         [Key]
         public int ID { get; set; }
         public List<Orders> Orders { get; set; }
-        System.Web.Mvc.SelectList SelectList { get; set; }
+        SelectList SelectList { get; set; }
         //public SelectList StoreLocation { get; set; }
         public string SearchString { get; set; }
         public int CustomerID { get; set; }

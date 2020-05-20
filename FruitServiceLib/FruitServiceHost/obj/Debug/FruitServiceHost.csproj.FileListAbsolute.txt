@@ -1,0 +1,11 @@
+C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\FruitServiceLib\FruitServiceHost\bin\Debug\FruitServiceHost.exe.config
+C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\FruitServiceLib\FruitServiceHost\bin\Debug\FruitServiceHost.exe
+C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\FruitServiceLib\FruitServiceHost\bin\Debug\FruitServiceHost.pdb
+C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\FruitServiceLib\FruitServiceHost\bin\Debug\FruitServiceLib.dll
+C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\FruitServiceLib\FruitServiceHost\bin\Debug\FruitServiceLib.pdb
+C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\FruitServiceLib\FruitServiceHost\bin\Debug\FruitServiceLib.dll.config
+C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\FruitServiceLib\FruitServiceHost\obj\Debug\FruitServiceHost.csprojAssemblyReference.cache
+C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\FruitServiceLib\FruitServiceHost\obj\Debug\FruitServiceHost.csproj.CoreCompileInputs.cache
+C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\FruitServiceLib\FruitServiceHost\obj\Debug\FruitServiceHost.csproj.CopyComplete
+C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\FruitServiceLib\FruitServiceHost\obj\Debug\FruitServiceHost.exe
+C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\FruitServiceLib\FruitServiceHost\obj\Debug\FruitServiceHost.pdb

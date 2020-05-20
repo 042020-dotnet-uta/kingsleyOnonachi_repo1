@@ -1,0 +1,6 @@
+C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\FruitServiceLib\bin\Debug\FruitServiceLib.dll.config
+C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\FruitServiceLib\bin\Debug\FruitServiceLib.dll
+C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\FruitServiceLib\bin\Debug\FruitServiceLib.pdb
+C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\FruitServiceLib\obj\Debug\FruitServiceLib.csproj.CoreCompileInputs.cache
+C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\FruitServiceLib\obj\Debug\FruitServiceLib.dll
+C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\FruitServiceLib\obj\Debug\FruitServiceLib.pdb

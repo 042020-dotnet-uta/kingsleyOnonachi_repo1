@@ -7,48 +7,72 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MvcProject1.BusinessLogic;
 using MvcProject1.Data;
+using MvcProject1.DataLogic;
 using MvcProject1.Models;
 
 namespace MvcProject1.Controllers
 {
     public class InventoryController : Controller
     {
+        private readonly IStoreRepository _storeRepository;
+        private readonly IProductRepository _productRepository;
         private readonly MvcProject1Context _context;
-        private IProductRepository _productRepository;
 
-        public InventoryController(MvcProject1Context context, IProductRepository productRepository)
+        public InventoryController(MvcProject1Context context, IStoreRepository storeRepository, IProductRepository productRepository)
         {
             _context = context;
             _productRepository = productRepository;
+            _storeRepository = storeRepository;
+            
         }
 
         // GET: Inventory
-        public async Task<IActionResult> Index()
+        public IActionResult Index(string Name, string Description, string SearchString)
         {
-            return View(await _context.InventoryViewModel.ToListAsync());
+            var products = _productRepository.GetAllProducts();
+            var stores = _storeRepository.GetAllStore();
+
+            foreach(var item in stores)
+            {
+                Console.WriteLine(item.CityAddress);
+            }
+            if (Description != null)
+            {
+                var productDes = _productRepository.GetProductByDescription(Description);
+            }
+            var InventoryViewModel = new InventoryViewModel
+            {
+                Products = products.ToList(),
+                StoreLocation = new SelectList(stores),
+
+            };
+
+            return View(InventoryViewModel);
         }
 
-        // GET: Inventory/Details/5
-        public async Task<IActionResult> Details(int? id)
+        [HttpPost]
+        public string Index(string searchString, bool notUsed) 
         {
-            var inventoryViewModel = new InventoryViewModel();
-            if (id != null)
-            {
-                inventoryViewModel = _productRepository.GetProductById(id);
-            }
-            else
-            {
-                return NotFound();
-            }
-
+            return $"From [HttpPost] Index Action Method: filtered on the substring, {searchString}";
+        }
+        // GET: Inventory/Details/5
+        public IActionResult Details(int? id)
+        {
             
-               
-            if (inventoryViewModel == null)
+            if (id == null)
+            {
+                return NotFound();
+            }
+            int Id = id.Value;
+            var product = _productRepository.GetProductById(Id);
+
+
+            if (product == null)
             {
                 return NotFound();
             }
 
-            return View(inventoryViewModel);
+            return View(product);
         }
 
         // GET: Inventory/Create
@@ -62,31 +86,32 @@ namespace MvcProject1.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID,Name,Description,SearchString")] InventoryViewModel inventoryViewModel)
+        public IActionResult Create([Bind("InventoryID,Name,Description,SearchString")] Inventory inventory)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(inventoryViewModel);
-                await _context.SaveChangesAsync();
+                _productRepository.AddProductToStore(inventory);
                 return RedirectToAction(nameof(Index));
             }
-            return View(inventoryViewModel);
+            return View(inventory);
         }
 
         // GET: Inventory/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        public IActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return NotFound();
             }
 
-            var inventoryViewModel = await _context.InventoryViewModel.FindAsync(id);
-            if (inventoryViewModel == null)
+            int Id = id.Value;
+            var product = _productRepository.GetProductById(Id);
+            if (product == null)
             {
                 return NotFound();
             }
-            return View(inventoryViewModel);
+            return View(product);
+           
         }
 
         // POST: Inventory/Edit/5
@@ -94,9 +119,9 @@ namespace MvcProject1.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ID,Name,Description,SearchString")] InventoryViewModel inventoryViewModel)
+        public IActionResult Edit(int id, [Bind("InventoryID,Name,Description,SearchString")] Inventory inventory)
         {
-            if (id != inventoryViewModel.ID)
+            if (id != inventory.InventoryID)
             {
                 return NotFound();
             }
@@ -105,57 +130,48 @@ namespace MvcProject1.Controllers
             {
                 try
                 {
-                    _context.Update(inventoryViewModel);
-                    await _context.SaveChangesAsync();
+
+                    var product = _productRepository.GetProductById(id);
+                    var inventoryView = _productRepository.UpdateProductInfo(product);
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!InventoryViewModelExists(inventoryViewModel.ID))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
+
+                    throw;
                 }
-                return RedirectToAction(nameof(Index));
+               
             }
-            return View(inventoryViewModel);
-        }
+            return RedirectToAction(nameof(Index));
+        } 
 
         // GET: Inventory/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        public IActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return NotFound();
             }
-
-            var inventoryViewModel = await _context.InventoryViewModel
-                .FirstOrDefaultAsync(m => m.ID == id);
-            if (inventoryViewModel == null)
+            int Id = id.Value;
+            var inventory = _productRepository.GetProductById(Id);
+               
+            if (inventory == null)
             {
                 return NotFound();
             }
 
-            return View(inventoryViewModel);
+            return View(inventory);
         }
 
         // POST: Inventory/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        public IActionResult DeleteConfirmed(int id)
         {
-            var inventoryViewModel = await _context.InventoryViewModel.FindAsync(id);
-            _context.InventoryViewModel.Remove(inventoryViewModel);
-            await _context.SaveChangesAsync();
+            var inventory = _productRepository.GetProductById(id);
+            _productRepository.DeleteProduct(inventory);
+
             return RedirectToAction(nameof(Index));
         }
 
-        private bool InventoryViewModelExists(int id)
-        {
-            return _context.InventoryViewModel.Any(e => e.ID == id);
-        }
     }
 }

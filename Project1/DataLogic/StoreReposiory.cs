@@ -8,17 +8,17 @@ using System.Threading.Tasks;
 
 namespace MvcProject1.DataLogic
 {
-    public class StoreReposiory : IStoreRepository
+    public class StoreRepository : IStoreRepository
     {
         private MvcProject1Context _context;
 
-        public StoreReposiory(MvcProject1Context context)
+        public StoreRepository(MvcProject1Context context)
         {
             _context = context;
         }
-        public async Task<IEnumerable<Store>> GetAllStore()
+        public IEnumerable<Store> GetAllStore()
         {
-            return await _context.Store.ToListAsync();
+            return _context.Store.ToList();
         }
 
         public  Store GetStoreById(int storeId)

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Web;
 
 namespace MvcProject1.Models
 {
@@ -23,5 +24,7 @@ namespace MvcProject1.Models
 
         [Display(Name ="Remember Me")]
         public bool RememberMe { get; set; }
+
+        public string ReturnUrl { get; set; }
     }
 }

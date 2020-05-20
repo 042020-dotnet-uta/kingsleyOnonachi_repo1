@@ -11,6 +11,7 @@ namespace MvcProject1.Data
 {
     public class Inventory
     {
+        [Key]
         public int InventoryID { get; set; }
 
         public int StoreID { get; set; }
@@ -23,6 +24,6 @@ namespace MvcProject1.Data
         public decimal ListPrice { get; set; }
 
         public virtual Store Store { get; set; }
-
+        public int? ID { get; internal set; }
     }
 }

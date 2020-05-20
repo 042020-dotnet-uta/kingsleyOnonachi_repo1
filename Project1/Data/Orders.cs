@@ -24,5 +24,6 @@ namespace MvcProject1.Data
 
         public virtual Customer Customer { get; set; }
         public virtual ICollection<Orderlist> Orderlist { get; set; }
+        public int? ID { get; internal set; }
     }
 }
