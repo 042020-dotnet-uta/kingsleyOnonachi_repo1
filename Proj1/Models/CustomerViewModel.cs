@@ -53,5 +53,7 @@ namespace Proj1.Models
         [Display(Name = "Date of Regisration")]
         [DataType(DataType.Date)]
         public DateTime RegDate { get; set; }
+
+        public int StoreID { get; set; }
     }
 }

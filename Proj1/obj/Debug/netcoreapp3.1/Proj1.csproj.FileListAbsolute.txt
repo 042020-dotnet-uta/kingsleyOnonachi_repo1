@@ -1,6 +1,7 @@
 C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\Proj1\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\Proj1\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\Proj1\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\Proj1\bin\Debug\netcoreapp3.1\Resource\led-tvhd-png.png
 C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\Proj1\bin\Debug\netcoreapp3.1\Proj1.exe
 C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\Proj1\bin\Debug\netcoreapp3.1\Proj1.deps.json
 C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\Proj1\bin\Debug\netcoreapp3.1\Proj1.runtimeconfig.json
@@ -145,6 +146,7 @@ C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\Proj1\obj\Debug\net
 C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\Proj1\obj\Debug\netcoreapp3.1\Proj1.TagHelpers.input.cache
 C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\Proj1\obj\Debug\netcoreapp3.1\Proj1.TagHelpers.output.cache
 C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\Proj1\obj\Debug\netcoreapp3.1\Proj1.RazorCoreGenerate.cache
+C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\Proj1\obj\Debug\netcoreapp3.1\Razor\Views\Cart\Buy.cshtml.g.cs
 C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\Proj1\obj\Debug\netcoreapp3.1\Razor\Views\Cart\Index.cshtml.g.cs
 C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\Proj1\obj\Debug\netcoreapp3.1\Razor\Views\CustomerLogin\CreateNew.cshtml.g.cs
 C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\Proj1\obj\Debug\netcoreapp3.1\Razor\Views\CustomerLogin\UserLogin.cshtml.g.cs
@@ -156,6 +158,11 @@ C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\Proj1\obj\Debug\net
 C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\Proj1\obj\Debug\netcoreapp3.1\Razor\Views\Customer\OrderHistory.cshtml.g.cs
 C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\Proj1\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\Proj1\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
+C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\Proj1\obj\Debug\netcoreapp3.1\Razor\Views\Inventory\Create.cshtml.g.cs
+C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\Proj1\obj\Debug\netcoreapp3.1\Razor\Views\Inventory\Delete.cshtml.g.cs
+C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\Proj1\obj\Debug\netcoreapp3.1\Razor\Views\Inventory\Details.cshtml.g.cs
+C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\Proj1\obj\Debug\netcoreapp3.1\Razor\Views\Inventory\Edit.cshtml.g.cs
+C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\Proj1\obj\Debug\netcoreapp3.1\Razor\Views\Inventory\Index.cshtml.g.cs
 C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\Proj1\obj\Debug\netcoreapp3.1\Razor\Views\Order\Create.cshtml.g.cs
 C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\Proj1\obj\Debug\netcoreapp3.1\Razor\Views\Order\Details.cshtml.g.cs
 C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\Proj1\obj\Debug\netcoreapp3.1\Razor\Views\Order\Index.cshtml.g.cs
@@ -163,10 +170,12 @@ C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\Proj1\obj\Debug\net
 C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\Proj1\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\Proj1\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
 C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\Proj1\obj\Debug\netcoreapp3.1\Razor\Views\Stores\Create.cshtml.g.cs
+C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\Proj1\obj\Debug\netcoreapp3.1\Razor\Views\Stores\Customers.cshtml.g.cs
 C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\Proj1\obj\Debug\netcoreapp3.1\Razor\Views\Stores\Delete.cshtml.g.cs
 C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\Proj1\obj\Debug\netcoreapp3.1\Razor\Views\Stores\Details.cshtml.g.cs
 C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\Proj1\obj\Debug\netcoreapp3.1\Razor\Views\Stores\Edit.cshtml.g.cs
 C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\Proj1\obj\Debug\netcoreapp3.1\Razor\Views\Stores\Index.cshtml.g.cs
+C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\Proj1\obj\Debug\netcoreapp3.1\Razor\Views\Stores\InventoryOfStore.cshtml.g.cs
 C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\Proj1\obj\Debug\netcoreapp3.1\Razor\Views\Stores\StoreOrderDetail.cshtml.g.cs
 C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\Proj1\obj\Debug\netcoreapp3.1\Razor\Views\Stores\StoreOrderHist.cshtml.g.cs
 C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\Proj1\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
@@ -181,10 +190,3 @@ C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\Proj1\obj\Debug\net
 C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\Proj1\obj\Debug\netcoreapp3.1\Proj1.pdb
 C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\Proj1\obj\Debug\netcoreapp3.1\Proj1.genruntimeconfig.cache
 C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\Proj1\obj\Debug\netcoreapp3.1\Proj1.csprojAssemblyReference.cache
-C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\Proj1\obj\Debug\netcoreapp3.1\Razor\Views\Inventory\Create.cshtml.g.cs
-C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\Proj1\obj\Debug\netcoreapp3.1\Razor\Views\Inventory\Delete.cshtml.g.cs
-C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\Proj1\obj\Debug\netcoreapp3.1\Razor\Views\Inventory\Details.cshtml.g.cs
-C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\Proj1\obj\Debug\netcoreapp3.1\Razor\Views\Inventory\Edit.cshtml.g.cs
-C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\Proj1\obj\Debug\netcoreapp3.1\Razor\Views\Inventory\Index.cshtml.g.cs
-C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\Proj1\bin\Debug\netcoreapp3.1\Resource\led-tvhd-png.png
-C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\Proj1\obj\Debug\netcoreapp3.1\Razor\Views\Stores\InventoryOfStore.cshtml.g.cs

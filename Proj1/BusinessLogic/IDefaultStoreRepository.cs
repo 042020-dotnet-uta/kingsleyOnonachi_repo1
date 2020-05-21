@@ -12,5 +12,8 @@ namespace Proj1.BusinessLogic
         public Task <List<Customer>> GetAllCustomerOfStore(int storeId);
         public int TotalOfStoreCustomers(int storeId = 1);
         Task <Store> GetCustomerDefaultStore(int customerId);
+        Task <DefaultStore> UpdateDefaultStore(DefaultStore defaultStore);
+        Task<DefaultStore>AddDefaultStore(DefaultStore defaultStore);
+
     }
 }

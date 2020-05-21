@@ -18,15 +18,18 @@ namespace Proj1.Controllers
         private readonly IOrderRepository _orderRepository;
         private readonly IOrderListRepository _orderListRepository;
         private readonly IProductRepository _productRepository;
+        private readonly IDefaultStoreRepository _defaultStoreRepository;
 
         public StoresController(Proj1Context context, IStoreRepository _storeRepository, IOrderRepository _orderRepository,
-            IOrderListRepository _orderListRepository, IProductRepository _productRepository)
+            IOrderListRepository _orderListRepository, IProductRepository _productRepository,
+            IDefaultStoreRepository _defaultStoreRepository)
         {
             _context = context;
             this._storeRepository = _storeRepository;
             this._orderRepository = _orderRepository;
             this._orderListRepository = _orderListRepository;
             this._productRepository = _productRepository;
+            this._defaultStoreRepository = _defaultStoreRepository;
         }
 
         // GET: Stores
@@ -180,6 +183,14 @@ namespace Proj1.Controllers
             if(storesOrder == null)
                 return RedirectToAction(nameof(Index));
             return View(storesOrder);
+        }
+
+        public async Task<IActionResult> Customers(int id)
+        {
+            var customers = await _defaultStoreRepository.GetAllCustomerOfStore(id);
+            if(customers == null)
+                return RedirectToAction(nameof(Index));
+            return View(customers);
         }
     }
 }

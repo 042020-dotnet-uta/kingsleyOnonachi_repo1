@@ -15,7 +15,6 @@ namespace MvcProject1.Models
         public int OrderID { get; set; }
         public List<Orders> Orders { get; set; }
         public List<Orderlist>Orderlists  { get; set; }
-        [HasNoKey()]
         public SelectList dateOfOrder { get; set; }
         public SelectList OrderTotal { get; set; }
     }

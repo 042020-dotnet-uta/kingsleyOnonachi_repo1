@@ -20,7 +20,6 @@ namespace Proj1.BusinessLogic
         void DeleteCustomer(int customerID);
         int GetCustomerIdByEmail(string email);
         Task<CustomerViewModel> GetCustomerViewByID(int Id);
-        Customer UserLogin(string email, string password);
-        
+        Customer UserLogin(string email, string password);   
     }
 }

@@ -1,0 +1,33 @@
+﻿Q1. What is the main component of a web service?
+        -(correct)Data
+        -service
+        -application
+        -XML
+
+
+Q2. What are the benefits of web service?
+* Create a process of communication whereby various applications to talk to each other and share data and services among themselves 
+* Reduction in cost of communication
+* (correct)Both of the above
+* None of the above
+
+
+Q3. The following are true about SOAP except?
+* (correct) Is a medium-weight protocol that is used for data exchange.
+* is a light-weight protocol that is used for data interchange between applications
+* is designed to be platform independent 
+* is designed to be operating system independent
+
+
+Q4. Select all that apply, SOAP Header element contains?
+* (correct) Authentication credentials
+* (correct)Definition of complex types
+* Call
+* Response information
+
+
+Q5. The following SOAP 1.2 specification defines three standard roles?
+* (correct) http://www.w3.org/2003/05/soap-envelope/none
+* (correct) http://www.w3.org/2003/05/soap-envelope/next
+* (correct) http://www.w3.org/2003/05/soap-envelope/ultimateReceiver
+* http://example.com/Log

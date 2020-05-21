@@ -33,16 +33,23 @@ namespace Proj1
                 options.UseSqlServer(Configuration.GetConnectionString("Proj1Context")));
 
             services.AddControllersWithViews();
-
+            //Adding different repos for data access and for dependence injections 
+            //This is use to have access to the database through dependence injection rather then acccessing
+            //data directly
+            //Adding customers repository
              services.AddTransient<ICustomerRepository, CustomerRepository>();
-
+            //Adding stores repository
             services.AddTransient<IStoreRepository, StoreRepository>();
+            ////Adding Inventory repository
             services.AddTransient<IProductRepository, ProductRepository>();
+            //Adding default store repository
             services.AddTransient<IDefaultStoreRepository, DefaultStoreRepository>();
+                //Adding order repository
             services.AddTransient<IOrderRepository, OrderRepository>();
+            //Adding cus repository
             services.AddTransient<IOrderListRepository, OrderListRepository>();
 
-
+            ///configuring service for authentication
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
                     .AddCookie(options =>
                     {

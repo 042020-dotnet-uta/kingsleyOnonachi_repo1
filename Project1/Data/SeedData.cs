@@ -308,7 +308,7 @@ namespace MvcProject1.Data
                     CountryAddress = "USA",
                     UserName = "Ander1",
                     Email = "anderma@gmail.co",
-                    PassWord ="NewKing$#@",
+                    PassWord =Crypto.Hash("NewKing$#@"),
                     RegDate = DateTime.Parse("2020-1-1")
                 },
                  new Customer
@@ -322,7 +322,7 @@ namespace MvcProject1.Data
                      CountryAddress = "USA",
                      UserName = "Ander1",
                      Email = "anderma@gmail.co",
-                     PassWord = "NeyKing$#@",
+                     PassWord = Crypto.Hash("NeyKing$#@"),
                      RegDate = DateTime.Parse("2020-2-1")
                  },
                  new Customer
@@ -336,7 +336,7 @@ namespace MvcProject1.Data
                      CountryAddress = "USA",
                      UserName = "JohJack",
                      Email = "anjokhhf@gmail.co",
-                     PassWord = "NeyKing$#@",
+                     PassWord = Crypto.Hash("NeyKing$#@"),
                      RegDate = DateTime.Parse("2019-2-1")
                  },
                  new Customer
@@ -350,7 +350,7 @@ namespace MvcProject1.Data
                      CountryAddress = "USA",
                      UserName = "JohJack",
                      Email = "lawif@gmail.co",
-                     PassWord = "NeyKing$#@",
+                     PassWord = Crypto.Hash("NeyKing$#@"),
                      RegDate = DateTime.Parse("2019-2-1")
                  },
                  new Customer
@@ -364,7 +364,7 @@ namespace MvcProject1.Data
                      CountryAddress = "USA",
                      UserName = "robJack",
                      Email = "robet@gmail.co",
-                     PassWord = "NeyKing$#@",
+                     PassWord = Crypto.Hash("NeyKing$#@"),
                      RegDate = DateTime.Parse("2019-2-10")
                  }
                 );

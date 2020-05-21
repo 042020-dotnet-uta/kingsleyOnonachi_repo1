@@ -79,6 +79,26 @@ namespace Proj1.DataLogic
             return await store;
         }
 
+        public async Task<DefaultStore> AddDefaultStore(DefaultStore defaultStore)
+        {
+            if(defaultStore != null)
+            {
+                 _context.Defaultstore.Add(defaultStore);
+                await _context.SaveChangesAsync();
+            }
+            await _context.SaveChangesAsync();
+            return defaultStore;
+        }
+        public async Task<DefaultStore> UpdateDefaultStore(DefaultStore defaultStore)
+        {
+            if (defaultStore != null)
+            {
+                _context.Defaultstore.Update(defaultStore);
+                await _context.SaveChangesAsync();
+            }
+            await _context.SaveChangesAsync();
+            return defaultStore;
+        }
         private Exception InvalidOperationException(string v)
         {
 

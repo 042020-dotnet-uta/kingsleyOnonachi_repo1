@@ -41,7 +41,7 @@ namespace Proj1.Controllers
                     return RedirectToAction("Index", "Home");
                 }
             }
-            return View();
+            return RedirectToAction("Index", "Home");
         }
 
         [HttpGet]

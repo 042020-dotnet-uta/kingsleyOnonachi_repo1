@@ -10,7 +10,7 @@ using Proj1.Models;
 
 namespace Proj1.Controllers
 {
-    [Route("cart")]
+   
     public class CartController : Controller
     {
         private readonly IProductRepository productRepo;
@@ -18,8 +18,8 @@ namespace Proj1.Controllers
         {
             this.productRepo = productRepo;
         }
-        [Authorize(Roles = "Customer")]
-        [Route("index")]
+        
+        
         public IActionResult Index()
         {
             var cart = SessionHelper.GetObjectFromJson<List<CartItem>>(HttpContext.Session, "cart");
@@ -28,7 +28,7 @@ namespace Proj1.Controllers
             return View();
         }
 
-        [Route("buy/{id}")]
+       
         public async Task<IActionResult> Buy(int id)
         {
             if (SessionHelper.GetObjectFromJson<List<CartItem>>(HttpContext.Session, "cart") == null)
@@ -56,7 +56,7 @@ namespace Proj1.Controllers
             return RedirectToAction("Index");
         }
 
-        [Route("remove/{id}")]
+        
         public IActionResult Remove(int id)
         {
             var cart = SessionHelper.GetObjectFromJson<List<CartItem>>(HttpContext.Session, "cart");

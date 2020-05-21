@@ -1,8 +1,10 @@
+C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\P1Test\bin\Debug\netcoreapp3.1\runtimes\linux-x86\native\libe_sqlite3.so
 C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\P1Test\bin\Debug\netcoreapp3.1\Proj1.Views.dll
 C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\P1Test\bin\Debug\netcoreapp3.1\Proj1.Views.pdb
 C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\P1Test\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\P1Test\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\P1Test\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\P1Test\bin\Debug\netcoreapp3.1\Resource\led-tvhd-png.png
 C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\P1Test\bin\Debug\netcoreapp3.1\Proj1.exe
 C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\P1Test\bin\Debug\netcoreapp3.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll
 C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\P1Test\bin\Debug\netcoreapp3.1\xunit.runner.reporters.netcoreapp10.dll
@@ -209,7 +211,6 @@ C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\P1Test\bin\Debug\ne
 C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\P1Test\bin\Debug\netcoreapp3.1\runtimes\linux-armel\native\libe_sqlite3.so
 C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\P1Test\bin\Debug\netcoreapp3.1\runtimes\linux-musl-x64\native\libe_sqlite3.so
 C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\P1Test\bin\Debug\netcoreapp3.1\runtimes\linux-x64\native\libe_sqlite3.so
-C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\P1Test\bin\Debug\netcoreapp3.1\runtimes\linux-x86\native\libe_sqlite3.so
 C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\P1Test\bin\Debug\netcoreapp3.1\runtimes\osx-x64\native\libe_sqlite3.dylib
 C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\P1Test\bin\Debug\netcoreapp3.1\runtimes\win-arm\native\e_sqlite3.dll
 C:\Revature\042020-dotnet-uta-RevRepo\kingsleyOnonachi_repo1\P1Test\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\e_sqlite3.dll

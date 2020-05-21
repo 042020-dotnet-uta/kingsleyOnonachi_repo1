@@ -17,6 +17,7 @@ namespace MvcProject1.Models
         [Key]
         public int ID { get; set; }
         public List<Customer> Customers { get; set; }
+        
         SelectList StoreLocation { get; set; }
 
         public string Firstname { get; set; }
